@@ -3,7 +3,9 @@
 # Запрос исходной и целевой директории у пользователя
 
 # Запрос расширения файлов, которые нужно скопировать
-
+echo "Please enter files extension to copy them:"
+read file_extension
+echo "Thank you. File extension: $file_extension"
 # Запросить новое расширение для файлов.
 
 # Проверка существования исходной директории и целевой директории
