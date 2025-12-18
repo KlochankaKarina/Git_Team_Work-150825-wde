@@ -5,7 +5,7 @@ read -p "Ввести путь к исходной директрии: " source_
 read -p "Ввести путь к целевой директории: " target_directory
 
 # Запрос расширения файлов, которые нужно скопировать
-echo -n "Please enter files extension to copy them: "
+echo -n "Please enter files extension to copy them:"
 read file_extension
 echo "Thank you. File extension: $file_extension"
 # Запросить новое расширение для файлов.
