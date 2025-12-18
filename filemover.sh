@@ -11,8 +11,14 @@ echo "Thank you. File extension: $file_extension"
 # Запросить новое расширение для файлов.
 
 # Проверка существования исходной директории и целевой директории
-
-
+for DIR in "$source_directory" "$target_directory" 
+ do
+    if [[ ! -d "$DIR" || ! -r "$DIR" || ! -x "$DIR" ]] 
+      then
+        echo "Error: directory doesn't exist or is inaccessible: $DIR"
+        exit 1
+    fi
+done
 # Проверка, есть ли файлы с указанным расширением в исходной директории
 if ls "$source_directory"/*."$file_extension" 1> /dev/null 2>&1; then
     echo "Файлы с расширением .$file_extension  найдены"
