@@ -28,6 +28,6 @@ else
 fi
 
 # Копирование файлов с указанным расширением в целевую директорию
-
+for i in "$source_directory"/*."$file_extension"; do cp "$i" "$target_directory"/"${i##*/%.$file_extension}.$new_file_extension"; done
 # Архивация исходных файлов.
 
